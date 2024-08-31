@@ -1,0 +1,86 @@
+:root {
+  --primary: #651fff;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Default */
+a {
+  text-decoration: none;
+}
+
+/* Reuse classes */
+
+.text-color {
+  color: var(--primary);
+}
+
+.weight-font-bold {
+  font-weight: bold;
+}
+
+.para-text-color {
+  color: #5c5f6e;
+}
+
+.btn-colr {
+  background-color: var(--primary);
+}
+
+/* banner */
+.banner {
+  padding: 100px 0px;
+  background-color: #ebe5fa;
+}
+
+/* big image */
+.big-image {
+  padding: 60px 0px;
+}
+
+/* lightning */
+.lightning {
+  padding: 100px 0px;
+}
+
+.lightning-wrraper > div > div > div {
+  background-color: var(--primary);
+  padding: 20px;
+  border-radius: 20px;
+  color: #ffffff;
+}
+
+.lightning a {
+  color: #ffffff;
+}
+
+/* lightweight */
+
+.lightweight {
+  padding: 100px 0px;
+}
+.lightweight-wrapper1 > div > div > div {
+  padding: 20px;
+  border-radius: 20px;
+}
+.lightweight-wrapper1 > div > div:nth-child(1) > div {
+  background-color: #fff7ed;
+}
+.lightweight-wrapper1 > div > div:nth-child(2) > div {
+  background-color: #e0f7fa;
+}
+
+.lightweight-wrapper2 {
+  padding: 50px;
+  background-color: #ececfe;
+  margin-top: 20px;
+  border-radius: 20px;
+}
