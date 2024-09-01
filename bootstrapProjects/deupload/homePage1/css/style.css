@@ -17,6 +17,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+  padding: 0px;
+}
 /* Reuse classes */
 
 .text-color {
@@ -33,6 +37,10 @@ a {
 
 .btn-colr {
   background-color: var(--primary);
+}
+
+.font-size-h {
+  font-size: 17px;
 }
 
 /* banner */
@@ -116,4 +124,70 @@ a {
   top: 20%;
   left: 75%;
   width: 60%;
+}
+
+@media (max-width: 767px) {
+  .works-wrapper-2 .row {
+    position: relative;
+  }
+
+  .work-box {
+    padding: 60px 0px;
+  }
+
+  .work-box > img:nth-of-type(2) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    width: 80px !important;
+    height: 80px;
+    bottom: -30px;
+    top: auto;
+  }
+
+  .col-md-4:last-child .work-box > img:nth-of-type(2) {
+    display: none;
+  }
+}
+
+/* ready */
+
+.ready {
+  padding: 50px 0px;
+}
+
+.ready-row {
+  margin-bottom: 300px;
+}
+.ready-col:first-child > div {
+  background-color: var(--primary);
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 20px 50px;
+}
+
+.ready-col:last-child > div {
+  background-color: #ececfe;
+  color: var(--primary);
+  border-radius: 20px;
+  padding: 20px 30px;
+}
+
+@media (min-width: 992px) {
+  .ready-row {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .ready-col {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* footer */
+.footer {
+  background-color: #1a284e;
+  color: #ffffff;
+  padding: 50px 0px;
 }
