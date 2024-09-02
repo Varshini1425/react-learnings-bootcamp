@@ -112,6 +112,16 @@ ul {
   font-weight: 600;
 }
 
+@media only screen and (max-width: 991px) {
+  .left-decenter > div:nth-child(2) > div {
+    text-align: center;
+  }
+  .left-decenter > div:nth-child(2) > div > div:nth-child(2) {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 /* works */
 .works {
   padding: 100px 0px;
@@ -190,4 +200,43 @@ ul {
   background-color: #1a284e;
   color: #ffffff;
   padding: 50px 0px;
+}
+
+@media only screen and (max-width: 991px) {
+  .reduce-size {
+    text-align: center;
+  }
+  .footer .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer .col-md-12.col-lg-5 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  .footer .col-md-6.col-lg-2 {
+    flex: 0 0 32.333333%;
+    max-width: 33.333333%;
+    padding: 0 20px;
+  }
+  .footer .secound-column {
+    background-color: transparent;
+  }
+  .footer .secound-column h6 {
+    margin-bottom: 15px;
+  }
+  .footer .secound-column .mt-5 {
+    margin-top: 0 !important;
+  }
+  .footer > div > div:nth-child(2) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .footer li {
+    font-size: 9px;
+  }
 }
