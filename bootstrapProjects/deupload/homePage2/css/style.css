@@ -1,0 +1,51 @@
+:root {
+  --primary: #651fff;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Default */
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+}
+
+/* Reuse classes */
+
+.text-color {
+  color: var(--primary);
+}
+.semi-bold {
+  font-weight: 600;
+}
+.weight-font-bold {
+  font-weight: bold;
+}
+
+.para-text-color {
+  color: #5c5f6e;
+}
+
+.btn-colr {
+  background-color: var(--primary);
+}
+/* header */
+header a {
+  color: #5c5f6e;
+}
+
+/* uncensored */
+.uncensored {
+  background-color: #e0f7fa;
+}
