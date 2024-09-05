@@ -26,7 +26,9 @@ ul {
 .text-color {
   color: var(--primary);
 }
-
+.semi-bold {
+  font-weight: 600;
+}
 .weight-font-bold {
   font-weight: bold;
 }
@@ -119,6 +121,64 @@ ul {
   .left-decenter > div:nth-child(2) > div > div:nth-child(2) {
     justify-content: center;
     align-items: center;
+  }
+}
+
+/* pricing */
+
+.pricing {
+  padding: 100px 0px;
+  background: linear-gradient(#00e5ff 55%, #ffffff 45%);
+}
+.pricing > div > div:nth-child(1) {
+  color: #ffffff;
+}
+
+.princing-wrapper ul {
+  display: inline-block;
+}
+.princing-wrapper ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: #5c5f6e;
+}
+.princing-wrapper > div > div {
+  padding: 10px 0px;
+}
+.princing-wrapper > div > div:nth-child(1) > div {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 24px 0px rgba(189, 189, 189, 0.2);
+}
+.princing-wrapper > div > div:nth-child(2) > div {
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 50px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.princing-wrapper > div > div:nth-child(2) > div > span:nth-of-type(1) {
+  background-color: #ececfe;
+  color: var(--primary);
+  padding: 3px 7px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+.princing-wrapper > div > div:nth-child(2) > div > span:nth-of-type(2) {
+  background-color: #e0f7fa;
+  color: #22d3ee;
+  padding: 3px 7px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 991px) {
+  .princing-wrapper > div > div:nth-child(2) > div {
+    border-radius: 25px;
+    margin-top: 30px;
   }
 }
 
