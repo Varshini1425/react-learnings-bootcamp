@@ -1,0 +1,238 @@
+:root{
+    --primary-color:#651FFF;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+
+}
+
+/* Default */
+a{
+    text-decoration: none;
+}
+
+ul{
+    padding: 0px;
+    list-style: none;
+}
+
+/* Reuse class */
+
+.text-primary-color{
+    color: var(--primary-color);
+}
+
+.banner{
+    padding: 100px 0px;
+    background-color: #EBE5FA;
+}
+
+/* big-image */
+.big-image{
+    padding: 60px 0px;
+}
+
+/* lightning */
+
+.lightning{
+    padding: 100px 0px;
+}
+
+.lighting-wrraper>div>div>div{
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+.lightning a{
+    color: #ffffff;
+}
+
+/* lightweight */
+.lightweight{
+    padding: 100px 0px;
+}
+
+.lightweight-wrappper > div > div > div{
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.lightweight-wrappper > div > div:nth-child(1) > div{
+    background-color: #FFF7ED;
+}
+
+.lightweight-wrappper > div > div:nth-child(2) > div{
+    background-color: #E0F7FA;
+}
+
+.lightweight-wrappper-2{
+    padding: 50px;
+    background-color: #ECECFE;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+/* privacy */
+
+.privacy{
+    padding: 100px 0px;
+}
+
+.privacy h2{
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.privacy-right-wrapper > div{
+    padding: 15px;
+    box-shadow: 0px 4px 24px 0px rgba(132, 132, 132, 0.2);
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+.blue-link{
+    color: #00E5FF;
+}
+
+.green-link{
+    color: #34D399;
+}
+
+/* pricing */
+
+.pricing{
+    padding: 100px 0px;
+    background: linear-gradient(#00E5FF 55%,#ffffff 45%);
+}
+
+
+.pricing-wrapper ul{
+   display: inline-block;
+}
+
+.pricing-wrapper ul li{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.pricing-wrapper > div > div:nth-child(1) > div{
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 24px 0px rgba(186, 186, 186, 0.2);
+}
+
+.pricing-wrapper > div > div:nth-child(2) > div{
+    background-color: #651FFF;
+    color: #ffffff;
+    padding: 50px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.pricing-wrapper > div > div:nth-child(2) > div > span:nth-of-type(1){
+    color: #651FFF;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+
+.pricing-wrapper > div > div:nth-child(2) > div > span:nth-of-type(2){
+    color: #22D3EE;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+/* works */
+
+.works{
+    padding: 100px 0px;
+}
+
+.works-wrapper>div>div>div{
+    position: relative;
+}
+
+.line{
+    position: absolute;
+    top: 50px;
+    left: 75%;
+    width: 60%;
+}
+
+/* ready */
+.ready{
+    padding: 100px 0px;
+}
+
+.own-m{
+    margin-bottom: 43px;
+}
+
+.ready-box-left{
+    background-color: #651FFF;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.ready-box-right{
+    background-color: #ECECFE;
+    padding: 30px;
+    border-radius: 20px;
+    color: #651FFF;
+}
+
+.ready-box-left,
+.ready-box-right{
+    min-height: 365px;
+}
+
+.test{
+    padding: 100px;
+}
+
+.text-wrapper > div > div > p{
+  color: red;
+}
+
+.test-2 > div > p:nth-of-type(2){
+    color: green;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .pricing-wrapper > div > div:nth-child(2) > div{
+        border-radius: 25px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .works-wrapper>div>div>div{
+        margin-bottom: 400px;
+    }
+
+    .works-wrapper>div>div:nth-child(3) > div{
+        margin-bottom: 0px;
+    }
+
+    .line{
+        top: 390px;
+        left: 25%;
+        rotate: 90deg;
+        width: 50%;
+    }
+  }
