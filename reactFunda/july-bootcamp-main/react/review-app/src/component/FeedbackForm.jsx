@@ -1,78 +1,81 @@
-import { useContext, useState } from "react"
-import Button from "./shared/Button"
-import Card from "./shared/Card"
-import FeedbackContext from "../context/FeedbackContext"
-
+import { useContext, useState, useEffect } from "react";
+import Button from "./shared/Button";
+import Card from "./shared/Card";
+import FeedbackContext from "../context/FeedbackContext";
 
 const FeedbackForm = () => {
-
-  const {addFeedback} = useContext(FeedbackContext);
+  const { addFeedback, editFeedback, updateFeedback } =
+    useContext(FeedbackContext);
 
   const [text, setText] = useState("");
   const [btnDisable, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
-  
+
+  useEffect(() => {
+    if (editFeedback.edit === true) {
+      setBtnDisabled(false);
+      setText(editFeedback.item.text);
+    }
+  }, [editFeedback]);
 
   const handleTextChange = (e) => {
-
-    if(text === ""){
-
+    if (text === "") {
       setBtnDisabled(true);
       setMessage("");
-
-    } else if(text !== "" && text.length < 10){
-
+    } else if (text !== "" && text.length < 10) {
       setBtnDisabled(true);
-      setMessage("Text must be atleast 10 char");
-
+      setMessage("Text must be at least 10 characters");
     } else {
       setBtnDisabled(false);
       setMessage("");
     }
 
     setText(e.target.value);
-  }
+  };
 
   const handleSubmit = (e) => {
-    
     e.preventDefault();
 
-    if(text.length > 10){
-
+    if (text.length > 10) {
       const newFeedback = {
-        text:text
-      }
+        text: text,
+      };
 
-      addFeedback(newFeedback);
+      if (editFeedback.edit === true) {
+        updateFeedback(editFeedback.item.id, newFeedback);
+      } else {
+        addFeedback(newFeedback);
+      }
 
       setText("");
       setBtnDisabled(true);
       setMessage("");
-
-
     }
-
-  }
+  };
 
   return (
     <Card>
-        <h2>Add your Review</h2>
+      <h2>{editFeedback.edit ? "Edit Review" : "Add your Review"}</h2>
 
-        <form onSubmit={handleSubmit}>
-           <div>
-            <input type="text" placeholder='Enter your review' onChange={handleTextChange} value={text}/>
-            
-            <Button type="submit" version="secondary" isDisabled={btnDisable}>
-              Send 
-            </Button>
-           </div>
-        </form>
-
+      <form onSubmit={handleSubmit}>
         <div>
-          <p className="error">{message}</p>
+          <input
+            type="text"
+            placeholder="Enter your review"
+            onChange={handleTextChange}
+            value={text}
+          />
+          <Button type="submit" version="secondary" isDisabled={btnDisable}>
+            {editFeedback.edit ? "Update" : "Send"}
+          </Button>
         </div>
-    </Card>
-  )
-}
+      </form>
 
-export default FeedbackForm
+      <div>
+        <p className="error">{message}</p>
+      </div>
+    </Card>
+  );
+};
+
+export default FeedbackForm;
